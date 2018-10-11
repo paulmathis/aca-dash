@@ -96,7 +96,26 @@ function tail(theArray) {
 //if a swap is done set it to true
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
-function sort(theArray) {}
+function sort(theArray) {
+  const sortedArr = theArray;
+  let swap = true;
+
+  while (swap) {
+    swap = false;
+    for (let i = 0; i < sortedArr.length - 1; i++) {
+      const current = sortedArr[i];
+      const next = sortedArr[i + 1];
+
+      if (current > next) {
+        swap = true;
+        sortedArr[i] = next;
+        sortedArr[i + 1] = current;
+      }
+    }
+  }
+
+  return sortedArr;
+}
 
 exports.map = map;
 exports.filter = filter;
