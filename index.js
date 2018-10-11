@@ -1,4 +1,3 @@
-
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 //create a function called `map`, it should take 2 parameters `array` and `iteratee`
 //`array` must be an array
@@ -11,8 +10,12 @@
 //iteratee is a function that must return something, capture whatever it returns in a variable
 //add the returned value from iteratee tp myNewArray
 //after looping, return  myNewArray
-function map(array, iteratee){
-
+function map(array, iteratee) {
+  const myNewArray = [];
+  for (let i = 0; i < array.length; i++) {
+    myNewArray.push(iteratee(array[i]));
+  }
+  return myNewArray;
 }
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
@@ -20,50 +23,37 @@ function map(array, iteratee){
 //`array` must be an array
 //`iteratee` must be a function that takes one parameter and returns a bool
 //in the map function create a new empty array and store in a variable named whatever you want (myNewArray)
-//loop `array` and call iteratee for each thing in the array, 
+//loop `array` and call iteratee for each thing in the array,
 //     passing in the item from the current loop
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
-function filter(array, iteratee){
-
-}
+function filter(array, iteratee) {}
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 //create a function called `find`, it should take 2 parameters `theArray` and `fnc`
-//loop theArray and call the fnc for each thing in the array, 
+//loop theArray and call the fnc for each thing in the array,
 //     passing in the item from the current loop
-//fnc will return true or false, if true return the item 
+//fnc will return true or false, if true return the item
 //after looping, return null
-function find(theArray, fnc){
-
-}
-
+function find(theArray, fnc) {}
 
 //return the last item in theArray
-function findLast(theArray){
-
-}
+function findLast(theArray) {}
 
 //return the first element of the array
-function head(theArray){
-
-}
+function head(theArray) {}
 
 //create a new array
 //loop theArray in reverse order
 //add the item from each loop to the new array
 //return the new array
-function reverse(theArray){
-
-}
+function reverse(theArray) {}
 
 //create a new array
 //loop theArray
 //add the item from each loop to the new array except the first item
 //return the new array
-function tail(theArray){
-
-}
+function tail(theArray) {}
 
 //implement the most basic sorting algorithm there is
 //assume the array will always have numbers
@@ -75,9 +65,7 @@ function tail(theArray){
 //if a swap is done set it to true
 //after each for loop check the variable, if true, continue the while loop
 //if false return theArray
-function sort(theArray){
-
-}
+function sort(theArray) {}
 
 exports.map = map;
 exports.filter = filter;
