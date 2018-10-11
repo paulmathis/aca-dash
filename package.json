@@ -1,6 +1,6 @@
 {
   "name": "slowdash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Not quite lodash",
   "main": "index.js",
   "dependencies": {},
