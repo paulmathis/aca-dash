@@ -1,4 +1,4 @@
-const _ = require('./index');
+const _ = require('../index');
 
 test('map returns equal length array', () => {
   const arr = [1, 2, 3, 4, 5];
