@@ -27,7 +27,15 @@ function map(array, iteratee) {
 //     passing in the item from the current loop
 //iteratee will return true or false, if true add the item to myNewArray else do not
 //after looping, return myNewArray
-function filter(array, iteratee) {}
+function filter(array, iteratee) {
+  const myNewArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (iteratee(array[i])) {
+      myNewArray.push(array[i]);
+    }
+  }
+  return myNewArray;
+}
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
 //create a function called `find`, it should take 2 parameters `theArray` and `fnc`
