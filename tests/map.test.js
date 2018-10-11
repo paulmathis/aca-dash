@@ -1,19 +1,19 @@
-const _ = require('../index');
+const { map } = require('../index');
 
-test('map returns equal length array', () => {
+test('returns equal length array', () => {
   const arr = [1, 2, 3, 4, 5];
 
-  const newArr = _.map(arr, (num) => {
+  const newArr = map(arr, (num) => {
     return num;
   });
 
   expect(newArr.length).toEqual(arr.length);
 });
 
-test('map multiplies each array item by 2', () => {
+test('multiplies each array item by 2', () => {
   const arr = [1, 2, 3, 4, 5];
 
-  const newArr = _.map(arr, (num) => {
+  const newArr = map(arr, (num) => {
     return num * 2;
   });
 
